@@ -17,6 +17,8 @@ with open(file_name,'w') as file:
 
 print("Text file created successfully")
 
+
+# mistake : if you are giving object neame separtely se that you add the type to it, such as first_one.txt
 object_name = 'first_one'
 s3.upload_file(file_name, bucket_name, object_name)
 

@@ -15,5 +15,4 @@ response = s3.create_bucket(
 )
 
 print("Bucket created successfully!")
-print(response)
 

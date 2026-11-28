@@ -13,18 +13,24 @@ Day 7 (2026-11-25)
 
 ## Files
 
-- `<script name>.py`: my solution (edit: add the file name)
+- `task_04_Paginator.py`: create the bucket.
+- `generate_quotes.py`: prepare the text-file data.
+- `upload_to_s3.py`: upload the files.
+- `list_s3_objects`: list objects using an S3 paginator.
 
 ## Requirements
 
 - Python 3 and `boto3` (`pip install -r requirements.txt` from the repo root).
-- AWS credentials configured locally (`aws configure` or `.env`). Never commit keys.
+- AWS credentials configured locally with `aws configure`. Never commit keys.
 - Change the bucket name in the script to a globally unique one.
 
 ## How to run
 
 ```bash
-python <script name>.py
+python task_04_Paginator.py
+python generate_quotes.py
+python upload_to_s3.py
+python list_s3_objects
 ```
 
 ## Expected output

@@ -1,70 +1,70 @@
 # AWS with Python
 
-Course work for **AWS with Python**, offered by SDLC Pune and Capgemini.
+Coursework for AWS with Python: Python practice, AWS hands-on exercises, and class notes.
 
-This repo holds my Python practice (programs, code snippets, viva questions), my AWS hands-on work with `boto3`, and my class notes (digital and handwritten).
+## Repository contents
 
-## Repository structure
+| Area | Contents |
+|---|---|
+| [Python practice](python-practice/python_practice_day1-day4/) | 10 programs, 50 code snippets, and viva questions |
+| [AWS exercises](aws/) | Intro and IAM notes, S3 exercises, and EC2 projects |
+| [Class notes](notes/) | Digital notes and handwritten scans, organised by day and topic |
 
-```
-aws-with-python/
-├── README.md
-├── .gitignore
-├── .env.example
-├── requirements.txt
-├── python-practice/               # fixed course resources, organised by type
-│   ├── programs/                  # 10 programs
-│   ├── code-snippets/             # 50 code snippets
-│   └── viva-questions/            # 40 viva questions + answers
-│       └── handwritten/           # photos/scans of handwritten viva notes
-├── aws/                           # hands-on AWS code, organised by service
-│   ├── iam/                       # IAM notes (users, groups, policies)
-│   └── s3/                        # boto3 scripts for S3
-└── notes/                         # organised by day
-    ├── _template.md               # copy this for each new day
-    ├── day-05-iam-s3.md
-    └── handwritten/               # day-05/, day-06/, ... photos or PDFs
-```
+### AWS exercises
+
+- [Introduction](aws/00_Intro/00_Intro_Day5/aws-introduction_day5.md)
+- [IAM](aws/01_IAM/01_IAM_Day5/iam-basicsz_day5.md)
+- [S3 tasks](aws/02_S3/02_S3_Day5-Day7/)
+- [EC2 Day 8: resume website](aws/03_EC2/03_EC2_Day_8/task_06_EC2_Hosting_resume_website/)
+- [EC2 Day 9: instance console](aws/03_EC2/03_EC2_Day_9/)
+
+### Python practice
+
+- [Programs](python-practice/python_practice_day1-day4/programs/)
+- [Code snippets](python-practice/python_practice_day1-day4/code-snippets/)
+- [Viva questions](python-practice/python_practice_day1-day4/viva-questions/)
 
 ## Progress
 
 | Area | Total | Done |
-|------|-------|------|
+|---|---:|---:|
 | Programs | 10 | 10 |
 | Code snippets | 50 | 50 |
-| Viva questions (answers written, plus extra Q23.1) | 40 | 40 |
-
-## Day-wise log
-
-| Day | Topic | Notes | Code |
-|-----|-------|-------|------|
-| 1-4 | Python practice (programs, snippets, viva questions) | | [`python-practice/`](python-practice/) |
-| 5 | AWS account, IAM (users, groups, policies, access keys), S3 basics, first `boto3` script | [day-05](notes/day-05-iam-s3.md) | [`aws/s3/`](aws/s3/) |
-
-## Daily routine
-
-1. Copy `notes/_template.md` to `notes/day-XX-topic.md` and fill it in.
-2. Save scripts into `aws/<service>/`.
-3. Add handwritten notes to `notes/handwritten/day-XX/`.
-4. Update the progress table and day-wise log here.
-5. Commit, for example `Day 6: EC2 basics`.
+| Viva questions | 40 | 40 |
 
 ## Setup
 
 ```bash
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-pip install -r requirements.txt
+python -m venv .venv
 ```
 
-Configure AWS credentials locally (never commit them):
+Activate the environment:
+
+```bash
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+
+# macOS/Linux
+source .venv/bin/activate
+```
+
+Install dependencies from the repository root:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+For AWS scripts, configure credentials using the AWS CLI:
 
 ```bash
 aws configure
 ```
 
-or copy `.env.example` to `.env` and fill in your values.
+The scripts use boto3's default credential chain. A `.env` file is not loaded automatically; scripts that need one must explicitly load it. Never put real credentials in source control.
 
-## Security note
+## Before running AWS exercises
 
-Access keys and secret keys must **never** be pushed to GitHub. `.gitignore` excludes `.env` and AWS credential files. If a key is ever committed, delete it in IAM immediately and create a new one. Keep handwritten-note photos free of keys and personal details.
+- Review and change the bucket names, region, AMI ID, and key-pair name in each exercise as needed.
+- AWS resource operations can incur charges. Stop or terminate resources and remove test data when finished.
+- The EC2 console exercise can create, stop, start, or terminate instances. Check the selected instance carefully before using its management options.
+- Never commit AWS keys or private `.pem` files. If a key is exposed, revoke it and create a replacement.

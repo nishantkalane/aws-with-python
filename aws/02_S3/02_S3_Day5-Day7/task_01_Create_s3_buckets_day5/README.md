@@ -1,4 +1,4 @@
-# Task 01: Create an S3 bucket, upload text files and list them
+# Task 01: Create an S3 bucket
 
 Day 5 (2026-11-23) and Day 6 (2026-11-24)
 
@@ -11,25 +11,26 @@ Day 5 (2026-11-23) and Day 6 (2026-11-24)
 
 ## Files
 
-- `<script name>.py`: my solution (edit: add the file name)
+- [`create_s3_bucket.py`](create_s3_bucket.py): creates the bucket. It does not upload files or list objects.
+- The upload, listing and pre-signed URL scripts are in [Task 02](../task_02_Pre-Signed-URL-day06/).
 
 ## Requirements
 
 - Python 3 and `boto3` (`pip install -r requirements.txt` from the repo root).
-- An IAM user with S3 permissions, configured locally (`aws configure` or `.env`). Never commit keys.
+- AWS credentials configured locally with `aws configure`. Never commit keys.
 - A globally unique bucket name.
 
 ## How to run
 
 ```bash
-python <script name>.py
+python create_s3_bucket.py
 ```
 
-## Expected output
+The bucket name is set in the script and may need to be changed to a globally unique name before running.
 
-- A message that the bucket was created.
-- The 4 files uploaded.
-- A list of the 4 object names (and sizes) in the bucket.
+## Task objective
+
+The class exercise also included uploading four text files and listing the objects. Those steps are not implemented by `create_s3_bucket.py`; use the Task 02 scripts for the related upload and listing practice.
 
 ## Concepts
 

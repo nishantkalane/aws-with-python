@@ -10,9 +10,9 @@ Date: 2026-11-26
 4. Installed **Nginx**, copied the website files with **SCP** and served my resume website.
 5. Troubleshot SSH and website connection problems.
 
-Project write-up: [`aws/ec2/ec2-static-resume-website/README.md`](../aws/ec2/ec2-static-resume-website/README.md)
+Project write-up: [`README.md`](../../aws/03_EC2/03_EC2_Day_8/task_06_EC2_Hosting_resume_website/README.md)
 
-Handwritten notes: [handwritten/day-08/](handwritten/day-08/)
+Handwritten notes: [Day 8 handwritten notes](../handwritten/Day-wise/day-08/ec2_resume_website_hosting_documentation.pdf)
 
 > Real addresses are replaced by placeholders such as `<EC2_PUBLIC_IP>`.
 
@@ -139,7 +139,7 @@ Our instance had:
 | ---------------- | -------------- |
 | Operating system | Ubuntu         |
 | Public IP        | <EC2_PUBLIC_IP> |
-| Private IP       | 172.31.36.4    |
+| Private IP       | <EC2_PRIVATE_IP> |
 | Username         | ubuntu         |
 | Architecture     | x86_64         |
 
@@ -187,7 +187,7 @@ A private IP is used for communication within private networks, such as an AWS V
 Our private IP:
 
 ```
-172.31.36.4
+<EC2_PRIVATE_IP>
 ```
 
 It is not normally directly reachable from the public internet.
@@ -198,7 +198,7 @@ It is not normally directly reachable from the public internet.
 | ------------------------------- | ---------------------------- |
 | Used for internet communication | Used within private networks |
 | Publicly routable               | Not publicly routable        |
-| Example: <EC2_PUBLIC_IP>         | Example: 172.31.36.4         |
+| Example: <EC2_PUBLIC_IP>         | Example: <EC2_PRIVATE_IP>     |
 
 ---
 
@@ -232,7 +232,7 @@ Understanding the command:
 After successful connection, we saw:
 
 ```
-ubuntu@ip-172-31-36-4:~$
+ubuntu@<EC2_PRIVATE_DNS>:~$
 ```
 
 This indicated that we were working inside the Ubuntu server.
@@ -265,7 +265,7 @@ C:\Users\user>
 Ubuntu:
 
 ```
-ubuntu@ip-172-31-36-4:~$
+ubuntu@<EC2_PRIVATE_DNS>:~$
 ```
 
 These are different environments.
@@ -275,7 +275,7 @@ These are different environments.
 | Local computer            | Remote EC2 server        |
 | Uses Windows paths        | Uses Linux paths         |
 | Runs SSH and SCP commands | Runs Linux commands      |
-| Example: C:\Users\user    | Example: /var/www/resume |
+| Example: `C:\Users\user`  | Example: `/var/www/resume` |
 
 This distinction was especially important when transferring files.
 

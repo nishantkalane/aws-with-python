@@ -60,23 +60,24 @@ The website files are stored on an EC2 instance and served to visitors through N
 | Architecture     | x86_64                |
 | Login Username   | ubuntu                |
 | Public IPv4      | <EC2_PUBLIC_IP>        |
-| Private IPv4     | 172.31.36.4           |
+| Private IPv4     | <EC2_PRIVATE_IP>      |
 | Region           | Asia Pacific (Sydney) |
 | Web Server       | Nginx                 |
 | Web Root         | /var/www/resume/      |
 
 ## 5. Project Files
 
-The original Windows directory:
+The project directory:
 
 ```
 aws-with-python/
 └── aws/
-    └── s3/
-        └── task_03_Static_Website_day07/
-            ├── index.html
-            ├── error.html
-            └── Nishant_Kalane_Resume.pdf
+    └── 03_EC2/
+        └── 03_EC2_Day_8/
+            └── task_06_EC2_Hosting_resume_website/
+                ├── index.html
+                ├── error.html
+                └── Nishant_Kalane_Resume.pdf
 ```
 
 The destination directory on EC2:
@@ -144,10 +145,10 @@ sudo chown -R ubuntu:ubuntu /var/www/resume
 
 ### Step 6: Upload Website Files
 
-Run SCP from Windows CMD, not inside Ubuntu:
+From PowerShell, change to this project directory and run SCP (replace the key path and public DNS):
 
 ```
-scp -i "C:\Users\user\my-new-key.pem" "C:\Users\user\Desktop\Programming\AWS_Projects\AWS_COURSE\aws-with-python\aws-with-python\aws\s3\task_03_Static_Website_day07\index.html" "C:\Users\user\Desktop\Programming\AWS_Projects\AWS_COURSE\aws-with-python\aws-with-python\aws\s3\task_03_Static_Website_day07\error.html" "C:\Users\user\Desktop\Programming\AWS_Projects\AWS_COURSE\aws-with-python\aws-with-python\aws\s3\task_03_Static_Website_day07\Nishant_Kalane_Resume.pdf" ubuntu@<EC2_PUBLIC_DNS>:/var/www/resume/
+scp -i "C:\path\to\my-key.pem" .\index.html .\error.html .\Nishant_Kalane_Resume.pdf ubuntu@<EC2_PUBLIC_DNS>:/var/www/resume/
 ```
 
 Verify the files:

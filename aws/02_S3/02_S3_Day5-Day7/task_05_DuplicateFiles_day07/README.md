@@ -10,7 +10,9 @@ Create 25 files (or use the past ones), upload them, compare them, and print whi
 
 ## Files
 
-- `<script name>.py`: my solution (edit: add the file name)
+- `generate_files.py`: prepare files including duplicates.
+- `upload_files.py`: upload the files.
+- `find_duplicates.py`: download text objects temporarily and group matching contents.
 
 ## Requirements
 

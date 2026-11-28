@@ -77,11 +77,11 @@ S3 is **object storage**: you store files (objects) inside containers (buckets) 
 **boto3** is the AWS SDK for Python. It uses the credentials of the IAM user.
 
 ```bash
-pip install boto3 python-dotenv
+python -m pip install -r requirements.txt
 aws configure        # asks for access key ID, secret key, region, output format
 ```
 
-Credentials can also come from environment variables or a local `.env` file (see `.env.example`). **Never hard-code keys in a script and never push them to GitHub.**
+Credentials can also come from environment variables. These scripts do not automatically load `.env` files. **Never hard-code keys in a script and never push them to GitHub.**
 
 ```python
 import boto3
@@ -107,17 +107,11 @@ Common reasons `create_bucket` fails:
 
 ## Scripts
 
-See [`aws/s3/`](../aws/s3/):
-
-- [`create_bucket.py`](../aws/s3/create_bucket.py): create a bucket
-- [`list_buckets.py`](../aws/s3/list_buckets.py): list buckets
-- [`upload_file.py`](../aws/s3/upload_file.py): upload a file
-
-IAM summary: [`aws/iam/README.md`](../aws/iam/README.md)
+The bucket-creation exercise is in [`create_s3_bucket.py`](../../aws/02_S3/02_S3_Day5-Day7/task_01_Create_s3_buckets_day5/create_s3_bucket.py). IAM notes: [`iam-basicsz_day5.md`](../../aws/01_IAM/01_IAM_Day5/iam-basicsz_day5.md).
 
 ## Handwritten notes
 
-- [handwritten/day-05/](handwritten/day-05/)
+- [Day 5 handwritten notes](../handwritten/Day-wise/day-05/)
 
 ## Doubts / to revise
 

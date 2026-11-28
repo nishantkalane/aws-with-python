@@ -8,33 +8,40 @@ Create a URL for the first file in the bucket so a friend can download the file 
 
 ## Files
 
-- `<script name>.py`: my solution (edit: add the file name)
+- `create_bucket.py`: create the practice bucket.
+- `upload_files.py`: create and upload four text files.
+- `list_objects.py`: list bucket objects.
+- `generate_url.py`: create a pre-signed URL and delete `fourth.txt` after its five-minute expiry.
 
 ## Requirements
 
 - Python 3 and `boto3`.
-- AWS credentials configured locally. Never commit keys.
+- AWS credentials configured locally with `aws configure`. Never commit keys.
 - A bucket with at least one uploaded text file (from Task 01).
 
 ## How to run
 
 ```bash
-python <script name>.py
+python create_bucket.py
+python upload_files.py
+python list_objects.py
+python generate_url.py
 ```
 
-## Steps
+The bucket name is hard-coded in these scripts; keep it consistent and change it if it is not available. The final script waits five minutes before deleting `fourth.txt`, so use the printed URL during that period.
 
-1. Create a pre-signed URL for the first file, valid for 5 minutes (300 seconds).
+## Exercise steps
+
+1. Create a pre-signed URL for an object, valid for 5 minutes (300 seconds).
 2. Print the URL.
 3. Open it in a browser or send it to a friend and check that the file downloads.
-4. Download the object with boto3.
-5. Delete the object from the bucket.
+4. The script deletes the object after the five-minute wait.
 
 ## How to test
 
 - Open the URL straight away: the file should download.
 - Open it again after 5 minutes: it should fail with `AccessDenied` (request has expired).
-- After step 5, list the bucket and check that the object is gone.
+- After the script finishes, list the bucket and check that the object is gone.
 
 ## Concepts
 

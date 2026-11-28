@@ -8,7 +8,9 @@ Create a static website of my resume as an `index.html` file and host it on AWS 
 
 ## Files
 
-- `index.html`: my resume (edit: add other files here, such as CSS or images)
+- `index.html`: website home page.
+- `error.html`: custom error page.
+- `Nishant_Kalane_Resume.pdf`: downloadable resume.
 
 ## Steps
 
@@ -22,8 +24,7 @@ Create a static website of my resume as an `index.html` file and host it on AWS 
 
 ## Result
 
-- Website link: (edit: paste the endpoint here)
-- Screenshot: (edit: optional, add to the handwritten or notes folder)
+The website endpoint is not recorded in this repository.
 
 ## Notes
 

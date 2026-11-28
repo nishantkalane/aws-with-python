@@ -68,12 +68,13 @@ A static website is made of fixed files (HTML, CSS, JavaScript, images). S3 can 
 
 ## Scripts written
 
-- [`aws/s3/`](../aws/s3/): my solutions for Tasks 04 and 05 (edit: add the file names)
-- My resume site: `index.html` (edit: add where it is saved or the website link)
+- [Task 03 static website files](../../aws/02_S3/02_S3_Day5-Day7/task_03_Static_Website_day07/)
+- [Task 04 paginator scripts](../../aws/02_S3/02_S3_Day5-Day7/task_04_Paginator_day07/)
+- [Task 05 duplicate-file scripts](../../aws/02_S3/02_S3_Day5-Day7/task_05_DuplicateFiles_day07/)
 
 ## Handwritten notes
 
-- [handwritten/day-07/](handwritten/day-07/)
+- [Day 7 handwritten notes](../handwritten/Day-wise/day-07/S3-Static-Website-Paginator-task-duplicate-files-task.pdf)
 
 ## Doubts / to revise
 

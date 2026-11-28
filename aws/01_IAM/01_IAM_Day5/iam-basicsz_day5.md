@@ -95,7 +95,7 @@ By default a new user has **no permissions**. An explicit **Deny** always beats 
 - Never use root for daily work. Turn on MFA for root.
 - Give **least privilege**: only the permissions needed.
 - Use groups instead of attaching policies to each user.
-- Never put access keys in code or on GitHub. Use `aws configure` or a `.env` file that is in `.gitignore`.
+- Never put access keys in code or on GitHub. Use `aws configure` or environment variables. Boto3 does not load a `.env` file automatically.
 - Rotate or delete keys you do not use.
 
 ## Quick summary

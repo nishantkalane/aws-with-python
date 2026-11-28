@@ -12,11 +12,11 @@ Date: YYYY-MM-DD
 
 ## Scripts written
 
-- [`aws/<service>/<script>.py`](../aws/<service>/<script>.py)
+- Add script paths under `../../aws/<service>/<day>/<task>/`.
 
 ## Handwritten notes
 
-- [handwritten/day-XX/](handwritten/day-XX/)
+- Add scans under `../handwritten/Day-wise/day-XX/`.
 
 ## Doubts / to revise
 

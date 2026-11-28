@@ -5,7 +5,7 @@ Date: 2026-11-24
 ## Done in class
 
 1. Learnt the benefits and main features of S3: storage limits, S3 Glacier, versioning, pre-signed URLs and static website hosting.
-2. Did **Task 01** (bucket, uploads, listing, a 5-minute pre-signed URL, download and delete) and saved my solution in `aws/s3/`.
+2. Did **Task 01** (bucket, uploads, listing, a 5-minute pre-signed URL, download and delete) and saved the scripts under the S3 task folders.
 
 ## Key points
 
@@ -108,7 +108,7 @@ s3.download_file(BUCKET_NAME, FILES[0], "downloaded_" + FILES[0])
 s3.delete_object(Bucket=BUCKET_NAME, Key=FILES[0])
 ```
 
-This reference version was checked against a mocked S3 (not the real AWS). My own solution is in [`aws/s3/`](../aws/s3/).
+This reference version was checked against a mocked S3 (not the real AWS). The related scripts are in [Task 02](../../aws/02_S3/02_S3_Day5-Day7/task_02_Pre-Signed-URL-day06/).
 
 **Things to remember**
 
@@ -119,12 +119,11 @@ This reference version was checked against a mocked S3 (not the real AWS). My ow
 
 ## Scripts written
 
-- [`aws/s3/`](../aws/s3/): my Task 01 solution (edit: add the file name here)
+- [Task 02 scripts](../../aws/02_S3/02_S3_Day5-Day7/task_02_Pre-Signed-URL-day06/): create a bucket, upload files, list objects, and generate a pre-signed URL
 
 ## Handwritten notes
 
-- [page-01.jpg](handwritten/day-06/page-01.jpg): benefits of S3, Glacier, versioning, pre-signed URL, static website hosting
-- [page-02.jpg](handwritten/day-06/page-02.jpg): Task 01
+- [Day 6 handwritten notes](../handwritten/Day-wise/day-06/S3-5_objectives_Bucket-creation-task.pdf): S3 features and Task 01
 
 ## Doubts / to revise
 
